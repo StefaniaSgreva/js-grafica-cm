@@ -2,7 +2,8 @@
 :root{
     --pink: #f8c3cb;
     --blue: #95c3ec;
-    --green: #c1ca50;
+    --green: #0DFC64;
+    --dark-green: #0CF2A2;
     --yellow: #fad445;
     --dark-pink: #f6048a;
     --white: #ffffff;
@@ -24,6 +25,17 @@ header,
 footer{
     background-color: var(--blue);
     height: 70px;
+}
+.level_picker{
+    background: var(--pink);
+    color: var(--white);
+    border: none;
+    padding: 0 10px;
+    -webkit-appearence: button;
+    outline: none;
+}
+.level_picker:focus{
+    border: none;
 }
 main{
     height: calc(100vh - 140px);
@@ -54,6 +66,7 @@ main{
     background-color: var(--white);
     width: 500px;
     height: 500px;
+    border: 5px solid var(--blue);
 }
 .square{
     display: flex;
@@ -61,12 +74,18 @@ main{
     align-items: center;
     cursor: pointer;
     border: 2px solid var(--blue);
-    background: linear-gradient(
+    /* background: linear-gradient(
         to top,
         #fafafa,
         #d0d3d8
-    );
+    ); */
+    /* box-shadow: 5px 5px 15px  rgba(0, 0, 0, 1.5) inset; */
 }
 .green{
-    background-color: var(--green);
-}
+    background: var(--green);
+    /* background: linear-gradient(
+        to top,
+        var(--dark-green),
+        var(--green)
+    );
+} */
