@@ -28,8 +28,9 @@ footer{
 main{
     height: calc(100vh - 140px);
     overflow-y: auto;
+    position: relative;
 }
-.welcome_msg{
+#welcome_msg{
     text-align: center;
     color: var(--white);
     -webkit-text-stroke-width: 2px;
@@ -39,4 +40,28 @@ main{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+#playing_field{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    background-color: var(--white);
+    width: 500px;
+    height: 500px;
+}
+.square{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid var(--blue);
+}
+.green{
+    background-color: var(--green);
 }

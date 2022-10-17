@@ -20,6 +20,66 @@ const playButton = document.getElementById('play');
 //GAME FUNCTION
 function play() {
     console.log('start playing . . .');
+    const welcomeMsg = document.getElementById('welcome_msg');
+    welcomeMsg.innerHTML = '';
+    const NUM_BOMBS = 16;
+    const bombsPosition = [];
+
+    let cellNum;
+    const pField = document.getElementById('playing_field');
+    pField.innerHTML = '';
+    const levelHtml = document.getElementById('level');
+    const level = levelHtml.value;
+    switch(level){
+        case '1':
+        default:
+            cellNum = 100;
+            break;
+        case '2':
+            cellNum = 81;
+        break; 
+        case '3':
+            cellNum = 49;
+        break;       
+    }
+
+    //RANDOM 16 CELL WITH BOMB
+    while(bombsPosition.length < NUM_BOMBS){
+        const bomb = randomNumber(1,cellNum);
+        if(!bombsPosition.includes(bomb)){
+            bombsPosition.push(bomb);
+        }
+    }
+    console.log(bombsPosition);
+
+    //DRAW CELL
+    function drawCell(num){
+        const cellForSide = Math.sqrt(cellNum);
+        const cell = document.createElement('div');
+        cell.className = 'square';
+        cell.style.width = `calc(100% / ${cellForSide})`;
+        cell.style.height = `calc(100% / ${cellForSide})`;
+        cell.innerHTML = `<span>${num}</span>`;
+
+        cell.addEventListener('click', function(){
+            this.classList.add('green');
+        })
+        return cell;
+    }
+    //DRAW PLAYING FIELD
+    function drawGrid(){
+        const grid = document.createElement('div');
+        grid.className = 'grid';
+        for(let i = 1; i <= cellNum; i++){
+            const cell = drawCell(i);
+            grid.appendChild(cell);
+        }
+        pField.appendChild(grid);
+    }
+
+    //INVOKE THE FUNCTION
+    drawGrid();
+
 }
 
 //EVENT LISTENER LINKED TO PLAY BUTTON
