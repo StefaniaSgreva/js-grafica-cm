@@ -1,0 +1,42 @@
+/* GENERAL STYLES */
+:root{
+    --pink: #f8c3cb;
+    --blue: #95c3ec;
+    --green: #c1ca50;
+    --yellow: #fad445;
+    --dark-pink: #f6048a;
+    --white: #ffffff;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
+    background-image: url(../img/XP_Pink_bg.PNG);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+header, 
+footer{
+    background-color: var(--blue);
+    height: 70px;
+}
+main{
+    height: calc(100vh - 140px);
+    overflow-y: auto;
+}
+.welcome_msg{
+    text-align: center;
+    color: var(--white);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: var(--blue);
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
