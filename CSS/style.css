@@ -26,6 +26,9 @@ footer{
     background-color: var(--blue);
     height: 70px;
 }
+.logo img{
+    width: 70%;
+}
 .level_picker{
     background: var(--pink);
     color: var(--white);
@@ -87,5 +90,5 @@ main{
         to top,
         var(--dark-green),
         var(--green)
-    );
-} */
+    );*/
+}
