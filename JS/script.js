@@ -63,9 +63,11 @@ function play() {
 
         cell.addEventListener('click', function(){
             this.classList.add('green');
+            console.log(num);
         })
         return cell;
     }
+
     //DRAW PLAYING FIELD
     function drawGrid(){
         const grid = document.createElement('div');
