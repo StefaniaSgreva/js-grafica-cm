@@ -22,9 +22,11 @@ function play() {
     console.log('start playing . . .');
     const welcomeMsg = document.getElementById('welcome_msg');
     welcomeMsg.innerHTML = '';
+
     const NUM_BOMBS = 16;
     const bombsPosition = [];
-
+    
+    // 3 LEVELS GRIDS
     let cellNum;
     const pField = document.getElementById('playing_field');
     pField.innerHTML = '';
@@ -62,7 +64,9 @@ function play() {
         cell.innerHTML = `<span>${num}</span>`;
 
         cell.addEventListener('click', function(){
-            this.classList.add('green');
+
+           this.classList.add('green');
+
             console.log(num);
         })
         return cell;

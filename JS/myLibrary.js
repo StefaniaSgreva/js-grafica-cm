@@ -41,6 +41,11 @@ return attention;
 
 }
 
+// function gameOver(square){
+//   if(square.classList.contains('bomb')){
+//     alert('Game Over !')
+//   } else{}
+// }
 
 
 
